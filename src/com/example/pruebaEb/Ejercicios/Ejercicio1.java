@@ -29,11 +29,22 @@ public class Ejercicio1 {
         getListMatches(collection1, collection2);
     }
 
+    /**
+     * Metodo para verificar si las colecciones son correctas
+     * @param keys
+     * @param collection
+     */
     public static void verifyExceptions(List<String> keys, String collection) {
         if(keys == null || keys.size() == 0 || keys.contains(null) || keys.contains("")){
             throw new IllegalArgumentException("La colección : " + collection + "no es valida !");
         }
     }
+
+    /**
+     * Metodo para obtener la colecion3 con las coincidencias
+     * @param collection1
+     * @param collection2
+     */
     private static void getListMatches(List<String> collection1, List<String> collection2) {
         List<String> collectionMatch = new ArrayList<String>();
         for (String c1 : collection1) {
